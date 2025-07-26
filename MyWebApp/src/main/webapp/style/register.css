@@ -1,0 +1,371 @@
+@charset "UTF-8";
+ :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #fc0050;
+            --accent-color: #3498db;
+            --dark-bg: #101010;
+            --light-bg: #191919;
+            --text-light: #ffffff;
+            --text-muted: #dddddd;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-top: 80px; /* Added to prevent content from being hidden behind navbar */
+        }
+
+        /* Navigation - Kept original but made sticky */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: rgb(21, 74, 74);
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo {
+            width: 60px;
+            margin: 2vh;
+            margin-left: 8%;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        .navbar {
+            display: flex;
+            margin-right: 4vh;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 18px;
+            padding: 10px 22px;
+            border-radius: 4px;
+            font-weight: 500;   
+            text-decoration: none;
+            transition: ease 0.40s;
+        }
+
+        .navbar a:hover,.navbar a.active {
+            background: white;
+            color: black;
+            box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+            border-radius: 5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+        }
+
+        /* Registration Form */
+        .registration {
+            padding: 50px 10% 80px; 
+            min-height: calc(100vh - 80px); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-container {
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            margin-top: 20px; /* Added some spacing from navbar */
+        }
+
+        /* Rest of your existing CSS remains the same */
+        .register-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+       .register-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--text-light), var(--secondary-color));
+    color: var(--secondary-color); /* Fallback color */
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+        .register-form h1 span {
+            color: var(--secondary-color);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-col {
+            flex: 1;
+        }
+
+        .register-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .register-form input[type="text"],
+        .register-form input[type="email"],
+        .register-form input[type="tel"],
+        .register-form input[type="number"],
+        .register-form input[type="datetime-local"],
+        .register-form select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius);
+            color: var(--text-light);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .register-form input:focus,
+        .register-form select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .radio-option input, .checkbox-option input {
+            width: 18px;
+            height: 18px;
+        }
+
+        .radio-option label, .checkbox-option label {
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin: 25px 0 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid rgba(252, 0, 80, 0.3);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 12px;
+        }
+
+        .terms-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .terms-checkbox label {
+            margin-bottom: 0;
+        }
+
+        .submitbtn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(45deg, var(--secondary-color), #ff3366);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submitbtn:hover {
+            background: linear-gradient(45deg, #ff3366, var(--secondary-color));
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(252, 0, 80, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            padding: 60px 0 20px;
+            color: var(--text-light);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .footlinks h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footlinks h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footlinks ul li {
+            margin-bottom: 12px;
+            list-style: none;
+        }
+
+        .footlinks ul li a {
+            color: var(--text-muted);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .footlinks ul li a:hover {
+            color: var(--text-light);
+            padding-left: 5px;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .social a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .end {
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .end p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .registration {
+                padding: 30px 5% 60px; /* Adjusted for mobile */
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .register-form h1 {
+                font-size: 2rem;
+            }
+            
+            .checkbox-group {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+
+            nav ul li {
+                margin-left: 15px;
+            }
+
+            .navbar a {
+                padding: 8px 12px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .register-container {
+                padding: 25px 15px;
+            }
+            
+            .navbar {
+                margin-right: 2vh;
+            }
+            
+            .navbar a {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+
+            nav .logo {
+                margin-left: 4%;
+                width: 50px;
+            }
+        }

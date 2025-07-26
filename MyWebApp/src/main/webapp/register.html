@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here | FirstFlight Travels</title>
+    <link rel="icon" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style/register.css">
+</head>
+<body class="register-body">
+
+    <nav>
+        <img src="assets/logo.png" class="logo" alt="FirstFlight Travels Logo">
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Home</a>
+                <a href="./index.html#locations">Locations</a>
+                <a href="./index.html#package">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="registration">
+        <div class="register-container">
+            <div class="register-form">
+                <h1>Register <span>Now</span></h1>
+                <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);">Join us for an unforgettable journey</p>
+                
+                <form action="RegisterServlet" method="post" onsubmit="return validateform()">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" name="myname1" id="name" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" name="myemail" id="email" placeholder="your.email@example.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="phonenum">Phone Number</label>
+                                <input type="tel" name="myphone" id="phonenum" placeholder="+91 9876543210" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" name="myage" id="age" placeholder="Your age" min="1" max="120" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4 class="section-title">Gender</h4>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" name="mygender" id="male" value="Male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="mygender" id="female" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="mygender" id="other" value="Other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <h4 class="section-title">Departure Date</h4>
+                                <input type="datetime-local" name="departuredate" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <h4 class="section-title">Return Date</h4>
+                                <input type="datetime-local" name="returndate" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4 class="section-title">Travel Destinations</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 10px;">Select all that apply</p>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="td" id="kashmir" value="Kashmir">
+                                <label for="kashmir">Kashmir</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="td" id="istanbul" value="Istanbul">
+                                <label for="istanbul">Istanbul</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="td" id="paris" value="Paris">
+                                <label for="paris">Paris</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="td" id="bali" value="Bali">
+                                <label for="bali">Bali</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="td" id="dubai" value="Dubai">
+                                <label for="dubai">Dubai</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="td" id="geneva" value="Geneva">
+                                <label for="geneva">Geneva</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="td" id="portblair" value="Port Blair">
+                                <label for="portblair">Port Blair</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="td" id="rome" value="Rome">
+                                <label for="rome">Rome</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4 class="section-title">Package Type</h4>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" name="locations" id="bronze" value="Bronze" required>
+                                <label for="bronze">Bronze</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="locations" id="silver" value="Silver">
+                                <label for="silver">Silver</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="locations" id="gold" value="Gold">
+                                <label for="gold">Gold</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="locations" id="platinum" value="Platinum">
+                                <label for="platinum">Platinum</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="terms-checkbox">
+                        <input type="checkbox" name="t&c" id="terms" checked required>
+                        <label for="terms">I agree to the <a href="#" style="color: var(--accent-color);">Terms & Conditions</a> and <a href="#" style="color: var(--accent-color);">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="submitbtn">Complete Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="#">Domestic</a></li>
+                    <li><a href="#">International</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect With Us</h4>
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://youtube.com/" target="_blank"><i class='bx bxl-youtube'></i></a>
+                </div>
+                <p style="margin-top: 20px; color: var(--text-muted);">Subscribe to our newsletter</p>
+            </div>
+        </div>
+
+        <div class="end">
+            <p>&copy; 2023 WanderWise Travels. All Rights Reserved.<br>Website developed by: Shivani Suryawanshi</p>
+        </div>
+    </footer>
+
+    <script>
+        function validateform() { 
+            var tel = document.getElementById("phonenum").value;  
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            
+            // Phone number validation
+            if(tel.length < 10) {  
+                alert("Phone number must be at least 10 digits!");  
+                return false;  
+            } else if(isNaN(tel)) {
+                alert("Phone number should only contain numbers!");
+                return false;
+            }
+            
+            // Name validation
+            if(name.length < 3) {
+                alert("Name must be at least 3 characters long!");
+                return false;
+            }
+            
+            // Simple email validation
+            if(!email.includes("@") || !email.includes(".")) {
+                alert("Please enter a valid email address!");
+                return false;
+            }
+            
+            // Check if at least one destination is selected
+            var destinations = document.querySelectorAll('input[name="td"]:checked');
+            if(destinations.length === 0) {
+                alert("Please select at least one travel destination!");
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input, select');
+            
+            inputs.forEach(input => {
+                // Add focus effect
+                input.addEventListener('focus', function() {
+                    this.parentNode.style.transform = 'translateY(-3px)';
+                });
+                
+                // Remove focus effect
+                input.addEventListener('blur', function() {
+                    this.parentNode.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Animate form container on load
+            const formContainer = document.querySelector('.register-container');
+            formContainer.style.opacity = '0';
+            formContainer.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                formContainer.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                formContainer.style.opacity = '1';
+                formContainer.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
