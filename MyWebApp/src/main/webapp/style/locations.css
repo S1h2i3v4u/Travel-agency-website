@@ -405,3 +405,28 @@ nav .logo {
 .slider-buttons button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+
+
+.location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.book-btn {
+  padding: 6px 14px;
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.book-btn:hover {
+  background-color: #e60044;
+}
