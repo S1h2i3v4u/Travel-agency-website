@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Kashmir Package |  WanderWise Travels</title>
+    <link rel="icon" href="pdf/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style/kashmir_2.css"> 
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <img src="assets/logo.png" class="logo" alt="FirstFlight Travels Logo">
+        <div class="navbar" id="navbarMenu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#locations">Locations</a></li>
+                <li><a href="./index.html#package">Packages</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <section class="booking-hero">
+        <div class="booking-hero-content">
+            <div class="booking-breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="kashmir_0.html">Packages</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="kashmir_1.html">Kashmir 5N/6D</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Booking</span>
+            </div>
+            <h1>Complete Your Booking</h1>
+        </div>
+    </section>
+
+    <!-- Booking Steps -->
+   
+
+    <!-- Booking Container -->
+    <div class="booking-container">
+        <div class="booking-form">
+            <h2>Payment Information</h2>
+            
+            <div class="form-section">
+                <h3><i class="fas fa-users"></i> Traveler Information</h3>
+                <div class="form-group">
+                    <label for="travelerCount">Number of Travelers</label>
+                    <input type="number" id="travelerCount" name="travelerCount" min="1" max="10" value="1" required>
+                </div>
+                
+                <!-- Traveler Details Container -->
+                <div id="travelerDetailsContainer"></div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+                <div class="payment-options">
+                    <div class="payment-option active">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" class="payment-icon">
+                        <span>Credit/Debit Card</span>
+                    </div>
+                    <div class="payment-option">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1200px-American_Express_logo_%282018%29.svg.png" alt="Amex" class="payment-icon">
+                        <span>Amex</span>
+                    </div>
+                    <div class="payment-option">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Paytm_Logo_%28standalone%29.svg/1024px-Paytm_Logo_%28standalone%29.svg.png" alt="Paytm" class="payment-icon">
+                        <span>Paytm</span>
+                    </div>
+                    <div class="payment-option">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/UPI-Logo-vector.svg/1200px-UPI-Logo-vector.svg.png" alt="UPI" class="payment-icon">
+                        <span>UPI</span>
+                    </div>
+                </div>
+                
+                <div class="payment-details">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" name="cardName" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3><i class="fas fa-file-invoice"></i> Billing Information</h3>
+                <div class="form-group">
+                    <label for="billingAddress">Billing Address</label>
+                    <input type="text" id="billingAddress" name="billingAddress" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="zipCode">ZIP Code</label>
+                        <input type="text" id="zipCode" name="zipCode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="India" selected>India</option>
+                            <option value="USA">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn btn-back">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <button type="submit" class="btn">Complete Booking</button>
+            </div>
+        </div>
+        
+        <div class="booking-summary">
+            <h2>Booking Summary</h2>
+            
+            <div class="summary-image">
+                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Kashmir 5N/6D Package">
+            </div>
+            
+            <div class="summary-item">
+                <span>Package:</span>
+                <strong>Kashmir 5N/6D</strong>
+            </div>
+            
+            <div class="summary-item">
+                <span>Travelers:</span>
+                <span id="summaryTravelers">1 Adult</span>
+            </div>
+            
+            <div class="summary-item">
+                <span>Dates:</span>
+                <span>15 Nov - 20 Nov 2023</span>
+            </div>
+            
+            <div class="summary-item">
+                <span>Base Price:</span>
+                <span id="summaryBasePrice">₹25,999 per person</span>
+            </div>
+            
+            <div class="summary-item">
+                <span>Subtotal:</span>
+                <span id="summarySubtotal">₹25,999</span>
+            </div>
+            
+            <div class="summary-item">
+                <span>Taxes & Fees:</span>
+                <span id="summaryTaxes">₹1,560</span>
+            </div>
+            
+            <div class="summary-item summary-total">
+                <span>Total:</span>
+                <strong id="summaryTotal">₹27,559</strong>
+            </div>
+            
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="promoCode">Promo Code</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="promoCode" name="promoCode" placeholder="Enter code" style="flex: 1;">
+                    <button type="button" class="btn" style="padding: 0 15px; width: auto;">Apply</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p style="font-size: 0.9rem; color: var(--text-muted);">
+                    <i class="fas fa-lock" style="color: var(--accent-color);"></i> Your payment is secure and encrypted
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="#">Domestic</a></li>
+                    <li><a href="#">International</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect With Us</h4>
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://youtube.com/" target="_blank"><i class='bx bxl-youtube'></i></a>
+                </div>
+                <p style="margin-top: 20px; color: var(--text-muted);">Subscribe to our newsletter</p>
+            </div>
+        </div>
+
+        <div class="end">
+            <p>&copy; 2023 FirstFlight Travels. All Rights Reserved.<br>Website developed by: Shivani Suryawanshi</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navbarMenu = document.getElementById('navbarMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navbarMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Payment Method Selection
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                paymentOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                
+                // Show/hide card details based on selection
+                const paymentDetails = document.querySelector('.payment-details');
+                if (option.textContent.includes('Credit/Debit') || option.textContent.includes('Amex')) {
+                    paymentDetails.style.display = 'block';
+                } else {
+                    paymentDetails.style.display = 'none';
+                }
+            });
+        });
+        
+        // Card Number Formatting
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
+        });
+        
+        // Expiry Date Formatting
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '').replace(/(\d{2})(\d{0,2})/, '$1/$2');
+        });
+        
+        // CVV Formatting
+        document.getElementById('cvv').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '').substring(0, 4);
+        });
+        
+        // Update traveler details form based on count
+        document.getElementById('travelerCount').addEventListener('change', function() {
+            const travelerCount = parseInt(this.value);
+            const container = document.getElementById('travelerDetailsContainer');
+            container.innerHTML = '';
+            
+            // Create fields for each traveler
+            for (let i = 1; i <= travelerCount; i++) {
+                const travelerDiv = document.createElement('div');
+                travelerDiv.className = 'traveler-details';
+                
+                travelerDiv.innerHTML = `
+                    <h4>Traveler ${i}</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="travelerName${i}">Full Name</label>
+                            <input type="text" id="travelerName${i}" name="travelerName${i}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travelerAge${i}">Age</label>
+                            <input type="number" id="travelerAge${i}" name="travelerAge${i}" min="1" max="120" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="travelerGender${i}">Gender</label>
+                        <select id="travelerGender${i}" name="travelerGender${i}" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                    </div>
+                `;
+                
+                container.appendChild(travelerDiv);
+            }
+            
+            // Update booking summary
+            const basePrice = 25999;
+            const taxesPerPerson = 1560;
+            const subtotal = basePrice * travelerCount;
+            const totalTaxes = taxesPerPerson * travelerCount;
+            const finalTotal = subtotal + totalTaxes;
+            
+            document.getElementById('summaryTravelers').textContent = 
+                travelerCount + (travelerCount === 1 ? ' Adult' : ' Adults');
+            
+            document.getElementById('summaryBasePrice').textContent = 
+                '₹' + basePrice.toLocaleString('en-IN') + ' per person';
+            
+            document.getElementById('summarySubtotal').textContent = 
+                '₹' + subtotal.toLocaleString('en-IN');
+            
+            document.getElementById('summaryTaxes').textContent = 
+                '₹' + totalTaxes.toLocaleString('en-IN');
+            
+            document.getElementById('summaryTotal').textContent = 
+                '₹' + finalTotal.toLocaleString('en-IN');
+            
+            // Store in localStorage
+            localStorage.setItem('bookingDetails', JSON.stringify({
+                travelerCount: travelerCount,
+                basePrice: basePrice,
+                totalPrice: subtotal,
+                taxes: totalTaxes,
+                finalTotal: finalTotal
+            }));
+        });
+
+        // Initialize with default values on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const travelerInput = document.getElementById('travelerCount');
+            if (travelerInput) {
+                travelerInput.dispatchEvent(new Event('change'));
+            }
+        });
+        
+        // Form Submission
+        document.querySelector('.booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const travelerCount = parseInt(document.getElementById('travelerCount').value);
+            const travelers = [];
+            
+            // Collect all traveler details
+            for (let i = 1; i <= travelerCount; i++) {
+                travelers.push({
+                    name: document.getElementById(`travelerName${i}`).value,
+                    age: document.getElementById(`travelerAge${i}`).value,
+                    gender: document.getElementById(`travelerGender${i}`).value
+                });
+            }
+            
+            // Get booking details from localStorage
+            const bookingDetails = JSON.parse(localStorage.getItem('bookingDetails')) || {
+                travelerCount: travelerCount,
+                basePrice: 25999,
+                totalPrice: 25999 * travelerCount,
+                taxes: 1560 * travelerCount,
+                finalTotal: (25999 + 1560) * travelerCount
+            };
+            
+            // Create traveler details HTML for confirmation
+            let travelerDetailsHTML = '';
+            travelers.forEach((traveler, index) => {
+                travelerDetailsHTML += `
+                    <div class="detail-item">
+                        <strong>Traveler ${index + 1}</strong>
+                        <span>${traveler.name}, ${traveler.age} years (${traveler.gender})</span>
+                    </div>
+                `;
+            });
+            
+            // Hide the form and show confirmation
+            document.querySelector('.booking-container').innerHTML = `
+                <div class="confirmation-section">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Booking Confirmed!</h2>
+                    <p>Thank you for booking with FirstFlight Travels. Your Kashmir adventure is all set! We've sent the confirmation details to your email.</p>
+                    
+                    <div class="booking-details">
+                        <h3>Booking Details</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <strong>Booking Reference</strong>
+                                <span>FF-KAS-2023-1254</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Package</strong>
+                                <span>Kashmir 5N/6D</span>
+                            </div>
+                            ${travelerDetailsHTML}
+                            <div class="detail-item">
+                                <strong>Travel Dates</strong>
+                                <span>15 Nov - 20 Nov 2023</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Total Paid</strong>
+                                <span>₹${bookingDetails.finalTotal.toLocaleString('en-IN')}</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Payment Method</strong>
+                                <span>Visa ending in 3456</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="./index.html" class="btn" style="max-width: 300px; margin: 0 auto;">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                </div>
+            `;
+            
+            // Update step progress
+            document.querySelector('.step-line-progress').style.width = '100%';
+            document.querySelectorAll('.step')[1].classList.remove('active');
+            document.querySelectorAll('.step')[1].classList.add('completed');
+            document.querySelectorAll('.step')[2].classList.add('active');
+        });
+        
+        // Back button functionality
+        document.querySelector('.btn-back').addEventListener('click', function() {
+            // In a real implementation, this would go back to traveler info
+            window.location.href = 'package-details.html';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navbarMenu.classList.contains('active')) {
+                        navbarMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
