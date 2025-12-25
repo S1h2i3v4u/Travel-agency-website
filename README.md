@@ -1,5 +1,5 @@
 # 🌍 Travel Agency Website
-http://localhost:8080/MyWebApp/index.html
+http://localhost:8080/MyWebApp/
 
 A simple dynamic travel agency website built using **Java (Servlets)**, **MySQL**, **HTML/CSS**, and **Tomcat Server**.
 
